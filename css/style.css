@@ -1,0 +1,722 @@
+/***************************/
+/* Header */
+/***************************/
+
+.logo {
+  height: 2.2rem;
+  width: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fae5d3;
+  padding: 0 4.8rem;
+
+  /* Because we want to be sticky latter*/
+  height: 9.6rem;
+  position: relative;
+}
+
+/***************************/
+/* Navigation stick */
+/***************************/
+
+.sticky {
+  animation: 0.3s header-down;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 95%;
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 3;
+  height: 7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+}
+
+@keyframes header-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.margin-header {
+  margin-top: 9.6rem;
+}
+/***************************/
+/* Navigation */
+/***************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-list a:link,
+.main-nav-list a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.main-nav-list a:hover,
+.main-nav-list a:active {
+  color: #cf711f;
+}
+
+.nav-cta:link,
+.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* Moblie */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+/* Selecting the item by the name of itself */
+/* .icon-mobile-nav[name="close-outline"] {
+  display: none;
+} */
+
+/***************************/
+/* Hero Section */
+/***************************/
+
+.hero-section {
+  background-color: #fae5d3;
+  padding: 3.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.5rem;
+  padding: 0 3.2rem;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.delivered-imgs img {
+  width: 4.8rem;
+  height: auto;
+  border-radius: 50%;
+  margin-right: -1rem;
+  border: 3px solid #fae5d3;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-meals p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-meals span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/***************************/
+/* Featured in section */
+/***************************/
+
+.featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #999;
+  text-align: center;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: grayscale(1) brightness(0);
+  opacity: 50%;
+}
+
+/***************************/
+/* Hero it works section */
+/***************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 40%;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.step-img-box::before {
+  width: 65%;
+  padding-bottom: 65%;
+  background-color: #fae5d3;
+}
+
+.step-img-box::after {
+  width: 50%;
+  padding-bottom: 50%;
+  background-color: #f8d8bd;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.step-text-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/***************************/
+/* Meals section */
+/***************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.meal:hover {
+  transform: translateY(-1.5rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.05);
+}
+
+.meal img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.meal-content {
+  padding: 3.6rem 4.6rem 4.6rem 4.6rem;
+  position: relative;
+}
+
+.tag {
+  font-weight: 700;
+  display: inline-block;
+  padding: 1rem 1.6rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 5px;
+}
+
+.tag.vegeterian {
+  background-color: #51cf66;
+}
+
+.tag.vegan {
+  background-color: #94d82d;
+}
+
+.tag.paleo {
+  background-color: #ffd43b;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.meal-attributes {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-attribute {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/***************************/
+/* Testemonials section */
+/***************************/
+
+.section-testemonials {
+  background-color: #fae5d3;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  align-items: center;
+}
+
+.testemonials-container {
+  padding: 9.6rem;
+}
+
+.testemonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5.6rem;
+}
+
+.testemonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testemonial-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial {
+  width: 100% !important;
+}
+
+.testemonial-name {
+  font-size: 1.4rem;
+  color: #6f6f6f;
+}
+
+/***************************/
+/* Gallery section */
+/***************************/
+
+figure {
+  margin: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* @keyframes rodador {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+
+  25% {
+    transform: rotate(3deg) scale(1.03);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1.06);
+  }
+
+  75% {
+    transform: rotate(-3deg) scale(1.09);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1.12);
+  }
+} */
+
+/***************************/
+/* Pricing section */
+/***************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-header {
+  text-align: center;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.pricing-plan {
+  border-radius: 5px;
+}
+
+.pricing-plan--starter {
+  border: 1px solid #f8d8bd;
+  justify-self: end;
+  padding: 4.8rem;
+}
+
+.pricing-plan--complete {
+  background-color: #f8d8bd;
+  padding: 4.8rem;
+  position: relative;
+  justify-self: start;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best Value";
+  display: inline-block;
+  position: absolute;
+  top: 8%;
+  right: -13%;
+  transform: rotate(45deg);
+  font-size: 1.6rem;
+  padding: 1rem 7.5rem;
+  color: #fff;
+  font-weight: 700;
+
+  background-color: #e67e22;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.plan-price span {
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.plan-details {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/***************************/
+/* Featured section */
+/***************************/
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+  background-color: #f8d8bd;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/***************************/
+/* CTA section */
+/***************************/
+
+.section-cta {
+  /* padding: 9.6rem 0 12.8rem 0;  */
+
+  /* top horizontal bottom */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta-grid {
+  background: linear-gradient(to right bottom, #eb984e, #e67e22);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 5.2rem;
+  color: #45260a;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-text-box .secondary-heading {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right,
+      rgb(235, 152, 78, 0.3),
+      rgb(230, 126, 34, 0.3)
+    ),
+    url("../img/eating.jpg");
+  /* That's because i'm not in the root of the page */
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  /* They do not inherets the font size */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cta-form label {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.cta-form input,
+.cta-form select {
+  font-family: inherit;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  background-color: #fdf2e9;
+  color: inherit;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.cta-form input::placeholder {
+  color: #bbb;
+}
+
+.cta-form *:focus {
+  outline: none;
+  /* outline: 4px solid #333;
+  outline-offset: 8px; */
+
+  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+}
+
+/***************************/
+/* Footer section */
+/***************************/
+
+.footer {
+  padding: 12.8rem 0 6.4rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 0;
+}
+
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+  transition: all 0.3s;
+  font-style: normal;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: #555;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  /* Making the container a flex container to put a margin bottom to the copy to move to the bottom,
+  and then if the footer was higher it would change automaticly */
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.contacts p {
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+  font-style: normal;
+}
+
+.contacts p:first-child {
+  margin-bottom: 2.4rem;
+}
